@@ -3,6 +3,7 @@ package com.ityuan.sell.service.impl;
 import com.ityuan.sell.dataobject.OrderDetail;
 import com.ityuan.sell.dto.CartDTO;
 import com.ityuan.sell.dto.OrderDTO;
+import com.ityuan.sell.enums.OrderStatusEnum;
 import com.ityuan.sell.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -77,10 +78,15 @@ public class OrderServiceImplTest {
 
     @Test
     public void cancel() throws Exception {
+        OrderDTO orderDTO = orderService.findOne(ORDER_ID);
+        OrderDTO result = orderService.cancel(orderDTO);
+//        System.out.println(result.toString());
+        Assert.assertEquals(OrderStatusEnum.CANCEL.getCode(), result.getOrderStatus());
     }
 
     @Test
     public void finish() throws Exception {
+
     }
 
     @Test
