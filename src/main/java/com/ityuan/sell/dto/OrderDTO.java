@@ -1,16 +1,15 @@
 package com.ityuan.sell.dto;
 
-<<<<<<< HEAD
 import com.ityuan.sell.dataobject.OrderDetail;
 import com.ityuan.sell.enums.OrderStatusEnum;
 import com.ityuan.sell.enums.PayStatusEnum;
-=======
+
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.ityuan.sell.dataobject.OrderDetail;
 import com.ityuan.sell.enums.OrderStatusEnum;
 import com.ityuan.sell.enums.PayStatusEnum;
 import com.ityuan.sell.utils.serializer.Date2LongSerializer;
->>>>>>> BuyerOrderController的完善
+
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -41,15 +40,15 @@ public class OrderDTO {
     /** 支付状态，默认0未支付 */
     private Integer payStatus;
     /** 创建时间*/
-<<<<<<< HEAD
-    private Date createTime;
+
+    private Date createTimeDate;
     /** 修改时间*/
-=======
+
     @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
     /** 修改时间*/
     @JsonSerialize(using = Date2LongSerializer.class)
->>>>>>> BuyerOrderController的完善
+
     private Date updateTime;
 
     List<OrderDetail> orderDetailList;

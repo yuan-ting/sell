@@ -16,10 +16,9 @@ import com.ityuan.sell.service.OrderService;
 import com.ityuan.sell.service.ProductService;
 import com.ityuan.sell.utils.KeyUtil;
 import lombok.extern.slf4j.Slf4j;
-<<<<<<< HEAD
-=======
+
 import org.hibernate.criterion.Order;
->>>>>>> BuyerOrderController的完善
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -179,12 +178,6 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-<<<<<<< HEAD
-    public OrderDTO finish(OrderDTO orderDTO) {
-        //判断订单状态
-
-        //修改状态
-=======
     @Transactional
     public OrderDTO finish(OrderDTO orderDTO) {
         //判断订单状态
@@ -206,21 +199,10 @@ public class OrderServiceImpl implements OrderService {
             throw new SellException(ResultEnum.ORDER_UPDATE_ERROR);
         }
 
->>>>>>> BuyerOrderController的完善
         return orderDTO;
     }
 
     @Override
-<<<<<<< HEAD
-    public OrderDTO paid(OrderDTO orderDTO) {
-        //判断订单状态
-
-        //判断支付状态
-
-        //修改支付状态
-
-        return null;
-=======
     @Transactional
     public OrderDTO paid(OrderDTO orderDTO) {
         //判断订单状态
@@ -245,6 +227,5 @@ public class OrderServiceImpl implements OrderService {
             throw new SellException(ResultEnum.ORDER_UPDATE_ERROR);
         }
         return orderDTO;
->>>>>>> BuyerOrderController的完善
     }
 }
