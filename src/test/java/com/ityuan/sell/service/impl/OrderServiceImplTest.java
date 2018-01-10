@@ -4,10 +4,10 @@ import com.ityuan.sell.dataobject.OrderDetail;
 import com.ityuan.sell.dto.CartDTO;
 import com.ityuan.sell.dto.OrderDTO;
 import com.ityuan.sell.enums.OrderStatusEnum;
-<<<<<<< HEAD
-=======
+
+
 import com.ityuan.sell.enums.PayStatusEnum;
->>>>>>> BuyerOrderController的完善
+
 import com.ityuan.sell.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -90,25 +90,21 @@ public class OrderServiceImplTest {
 
     @Test
     public void finish() throws Exception {
-<<<<<<< HEAD
-=======
+
         OrderDTO orderDTO = orderService.findOne(ORDER_ID);
         OrderDTO result = orderService.finish(orderDTO);
 
         Assert.assertEquals(OrderStatusEnum.FINISHED.getCode(), result.getOrderStatus());
->>>>>>> BuyerOrderController的完善
 
     }
 
     @Test
     public void paid() throws Exception {
-<<<<<<< HEAD
-=======
+
         OrderDTO orderDTO = orderService.findOne(ORDER_ID);
         OrderDTO result = orderService.paid(orderDTO);
 
         Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(), result.getPayStatus());
->>>>>>> BuyerOrderController的完善
     }
 
 }
